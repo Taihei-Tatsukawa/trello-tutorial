@@ -36,4 +36,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## trello clone 学習用リポジトリ
+
 参考動画 https://www.youtube.com/watch?v=pRybm9lXW2c&t=5101s

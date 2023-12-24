@@ -1,4 +1,4 @@
-language: "jp"
+language: 'jp'
 early_access: false
 reviews:
   high_level_summary: true
@@ -6,11 +6,11 @@ reviews:
   review_status: true
   collapse_walkthrough: false
   path_filters:
-    - "!**/.xml"
+    - '!**/.xml'
   path_instructions:
-    - path: "**/*.js"
-      instructions: "Review the JavaScript code for conformity with the Google JavaScript style guide, highlighting any deviations."
-    - path: "tests/**/*"
+    - path: '**/*.js'
+      instructions: 'Review the JavaScript code for conformity with the Google JavaScript style guide, highlighting any deviations.'
+    - path: 'tests/**/*'
       instructions: |
         "Assess the unit test code employing the Mocha testing framework. Confirm that:
         - The tests adhere to Mocha's established best practices.
@@ -18,11 +18,11 @@ reviews:
   auto_review:
     enabled: true
     ignore_title_keywords:
-      - "WIP"
-      - "DO NOT MERGE"
+      - 'WIP'
+      - 'DO NOT MERGE'
     drafts: false
     base_branches:
-      - "develop"
-      - "feat/*"
+      - 'develop'
+      - 'feat/*'
 chat:
   auto_reply: true
