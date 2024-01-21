@@ -15,8 +15,9 @@ export const Logo = () => {
         <Image
           src="/logo.svg"
           alt="Logo"
-          height={30}
+          height={20}
           width={30}
+          priority={true}
           className="h-auto max-w-full"
         />
         <p
