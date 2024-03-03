@@ -7,6 +7,7 @@ import { useOrganization, useOrganizationList } from '@clerk/nextjs';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useLocalStorage } from 'usehooks-ts';
+import { NavItem, Organization } from './nav-item';
 
 interface SidebarProps {
   storageKey?: string;
@@ -47,6 +48,7 @@ export const Sidebar = ({ storageKey = 't-sidebar-state' }: SidebarProps) => {
     [],
   );
 
+  // localstorageにサイドバーのアコーディオンの状態を保存
   const onExpand = (id: string) => {
     setExpanded((curr) => ({
       ...curr,
@@ -84,7 +86,13 @@ export const Sidebar = ({ storageKey = 't-sidebar-state' }: SidebarProps) => {
         className="space-y-2"
       >
         {userMemberships.data.map(({ organization }) => (
-          <p key={organization.id}>{organization.id}</p>
+          <NavItem
+            key={organization.id}
+            isActive={activeOrganization?.id === organization.id}
+            isExpanded={expanded[organization.id]}
+            organization={organization as Organization}
+            onExpand={onExpand}
+          />
         ))}
       </Accordion>
     </>
